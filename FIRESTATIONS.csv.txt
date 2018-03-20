@@ -1,0 +1,31 @@
+ID,NAME,ADDRESS,COMMUNITY,HES_EMS,STATION_NO,TYPE,LONGITUDE,LATITUDE
+122,Fire Station 29 - (Fpb),189 King Street East,Dundas,NO,29,Fire Prevention - Main Office,-79.94232906,43.26919187
+123,Fire Station 28,1801 Brock Road,Freelton,NO,28,Volunteer,-80.03879397,43.3978038
+124,Fire Station 27,795 Old Highway 8,Rockton,NO,27,Volunteer,-80.12685026,43.29973383
+125,Fire Station 25,361 Old Brock Road,Greensville,YES,25,Volunteer,-79.99422718,43.28188318
+126,Fire Station 26,119 Lynden Road,Lynden,YES,26,Volunteer,-80.14803961,43.23699883
+2,Fire Station 24,256 Parkside Drive,Waterdown,YES,24,Composite,-79.90526597,43.33578984
+6,Fire Station 23,"19 Sydenham Street, Memorial Square",Dundas,YES,23,Career,-79.95697156,43.26574231
+7,Fire Station 13,177 Bay Street North,Hamilton,NO,13,Mechanical Shop,-79.87176403,43.26392187
+8,Fire Station 21,365 Wilson Street West,Ancaster,YES,21,Composite,-80.00216593,43.20855271
+9,Fire Station 10,1455 Main Street West,Hamilton,YES,10,Career,-79.92342327,43.25729973
+10,Fire Station 3,965 Garth Street,Hamilton,YES,3,Career,-79.90158902,43.23076715
+11,Fire Station 11,24 Ray Street,Hamilton,NO,11,Career,-79.88090518,43.25928834
+12,Fire Station 1- (Fpb),35-43 John Street North,Hamilton,YES,1,Career,-79.86618024,43.25708913
+13,Fire Station 6,246 Wentworth Street North,Hamilton,NO,6,Career,-79.84533579,43.25927049
+14,Fire Station 2,1400 Upper Wellington Street,Hamilton,NO,2,Career,-79.87969383,43.21044949
+15,Fire Station 4,729 Upper Sherman Avenue,Hamilton,YES,4,Career,-79.85001423,43.22452937
+16,Fire Station 5,1227 Stone Church Road East,Hamilton,NO,5,Career,-79.8349658,43.19832952
+17,Training Academy / Administration,1227 Stone Church Road East,Hamilton,NO,22,Training Academy / Administration,-79.83595844,43.19958356
+18,Fire Station 9,125 Kenilworth Avenue North,Hamilton,YES,9,Career,-79.80873699,43.24416473
+19,Fire Station 8,400 Melvin Avenue,Hamilton,NO,8,Career,-79.77928295,43.24084501
+20,Fire Station 19,3302 Homestead Road,Mount Hope,YES,19,Volunteer,-79.9164842,43.15335547
+21,Fire Station 17,363 Isaac Brock Street,Stoney Creek,YES,17,Composite,-79.78936757,43.19424359
+22,Fire Station 7,225 Quigley Road,Hamilton,YES,7,Career,-79.7841725,43.21576609
+23,Fire Station 12,199 Highway 8,Stoney Creek,YES,12,Career,-79.74009223,43.22312916
+24,Fire Station 15,415 Arvin Avenue,Stoney Creek,YES,15,Volunteer,-79.71652336,43.22993324
+25,Fire Station 16,939 Barton Street,Winona,NO,16,Volunteer,-79.6755124,43.21714033
+26,Fire Station 18,2636 Regional Rd 56,Binbrook,YES,18,Volunteer,-79.80501145,43.12170676
+27,Ems Station 30,489 Victoria Avenue North,Hamilton,YES,30,EMS only - Fleet Centre,-79.85048499,43.26865303
+61,Fire Station 14,585 Chapel Hill Road,Glanbrook,NO,14,Volunteer,-79.71820762,43.15857605
+102,Fire Station 20,661 Garner Rd,Ancaster,YES,20,Career,-79.95362034,43.20694695
