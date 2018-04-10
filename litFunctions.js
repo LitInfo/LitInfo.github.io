@@ -1,4 +1,5 @@
 		$(document).ready(function() {
+
 			$("#logout1").hide();
 			navigator.geolocation.getCurrentPosition (function(position){
 			latitude1 = position.coords.latitude;
@@ -59,7 +60,7 @@
 							if (listStations[i].name == "Ems Station 30" ){
 							
 								map.addMarker({lat: listStations[i].latitude, lng: listStations[i].longtitude, icon: "images/emsIcon.png", infoWindow : {content: "<div id = infobox><img src = 'images/emsv2.jpg'><p><strong>"+ 
-								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
+								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"<br>Phone Number: 905-546-3333" +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
 								
 								//Adds location detail for EMS Station seperately
 								$("#places").append("<ul class='media-list'>"+
@@ -72,14 +73,14 @@
 															"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
 															"Provides EMS: " + listStations[i].EMS +
 															"<br>Type of station: " + listStations[i].type +
-															"<br><a id = 'fav"+i+"' href = '#'>Favorite</a>"+
+                                                            "<br>Phone Number: 905-546-3333" +
 															"</div><br></li></ul>"
 												);
 								i++;
 							}
 							//Adds all the markers to the map
 							map.addMarker({lat: listStations[i].latitude, lng: listStations[i].longtitude, icon: "images/firedeptv3icon.png", infoWindow : {content: "<div id = infobox><img src = 'images/firedeptv3.png'><p><strong>"+ 
-							listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
+							listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"<br>Phone Number: 905-546-3333" +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
 						//Adds all location details of stations
 						$("#places").append("<ul class='media-list'>"+
 														"<li class='media'>"+
@@ -91,7 +92,7 @@
 														"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
 														"Provides EMS: " + listStations[i].EMS +
 														"<br>Type of station: " + listStations[i].type +
-														"<br><a id = 'fav"+i+"' href = '#'>Favorite</a>"+
+                                                        "<br>Phone Number: 905-546-3333" +
 														"</div><br></li></ul>"
 											);
 						var ctr = 1;					
@@ -111,7 +112,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Destination")){
+								  if(e.instructions.includes("King St E")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -227,7 +228,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Parkside Dr")){
+								  if(e.instructions.includes("Destination")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -256,7 +257,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Destination")){
+								  if(e.instructions.includes("Parkside Dr")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -302,6 +303,7 @@
 						
 						$("#direct7").click(function()
 						{ctr = 1;
+
 						$("#instructions").empty();
 							map.cleanRoute();
 							map.travelRoute({
@@ -343,7 +345,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Destination")){
+								  if(e.instructions.includes("Meadowbrook Dr")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -836,7 +838,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Hamilton Regional Rd 56 S")){
+								  if(e.instructions.includes("Destination")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -865,7 +867,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Destination")){
+								  if(e.instructions.includes("Hamilton Regional Rd 56 S")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -895,7 +897,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Chapel Hill")){
+								  if(e.instructions.includes("Destination")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -924,7 +926,7 @@
 								}
 								$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 								  
-								  if(e.instructions.includes("Destination")){
+								  if(e.instructions.includes("Chapel Hill")){
 									ctr = 2;
 								  }
 								  //map.setCenter(e.end_location.lat(), e.end_location.lng());
@@ -937,9 +939,38 @@
 								});
 							}
 							});
-						});	
-						
-					}	
+						});
+
+                        $("#direct29").click(function()
+                        {	ctr = 1;
+                            $("#instructions").empty();
+                            map.cleanRoute();
+                            map.travelRoute({
+                                origin: [latitude1, longitude1],
+                                destination: [listStations[29].latitude, listStations[29].longtitude],
+                                travelMode: 'driving',
+                                step: function(e) {
+                                    if (ctr ==1){
+                                        $('#instructions').append('<li>'+e.instructions+'</li>');
+                                    }
+                                    $("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+
+                                        if(e.instructions.includes("Destination")){
+                                            ctr = 2;
+                                        }
+                                        //map.setCenter(e.end_location.lat(), e.end_location.lng());
+                                        map.drawPolyline({
+                                            path: e.path,
+                                            strokeColor: '#131540',
+                                            strokeOpacity: 0.6,
+                                            strokeWeight: 6
+                                        });
+                                    });
+                                }
+                            });
+                        });
+
+                    }
 				});
 				
 				$("#EMS").click(function(){
@@ -958,7 +989,7 @@
 							if (listStations[i].EMS == "YES" ){
 							
 								map.addMarker({lat: listStations[i].latitude, lng: listStations[i].longtitude, icon: "images/emsIcon.png", infoWindow : {content: "<div id = infobox><img src = 'images/emsv2.jpg'><p><strong>"+ 
-								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
+								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"<br>Type of Station: " + listStations[i].type +"<br>Phone Number: " + listStations[i].phone +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
 								
 								//Adds location detail for EMS Station seperately
 								$("#places").append("<ul class='media-list'>"+
@@ -971,13 +1002,14 @@
 															"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
 															"Provides EMS: " + listStations[i].EMS +
 															"<br>Type of station: " + listStations[i].type +
+                                                            "<br>Phone Number: " + listStations[i].phone +
 															"</div><br></li></ul>"
 												);
 								i++;
 							}
 							
 							var ctr = 1;					
-							$("#direct2").click(function()
+							$("#direct3").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -985,7 +1017,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[2].latitude, listStations[2].longtitude],
+								  destination: [listStations[3].latitude, listStations[3].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1009,7 +1041,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct4").click(function()
+							$("#direct5").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1017,7 +1049,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[4].latitude, listStations[4].longtitude],
+								  destination: [listStations[5].latitude, listStations[5].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1041,7 +1073,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct7").click(function()
+							$("#direct8").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1049,7 +1081,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[7].latitude, listStations[7].longtitude],
+								  destination: [listStations[8].latitude, listStations[8].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1073,7 +1105,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct9").click(function()
+							$("#direct10").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1081,7 +1113,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[9].latitude, listStations[9].longtitude],
+								  destination: [listStations[10].latitude, listStations[10].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1105,7 +1137,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct11").click(function()
+							$("#direct12").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1113,7 +1145,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[11].latitude, listStations[11].longtitude],
+								  destination: [listStations[12].latitude, listStations[12].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1137,7 +1169,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct14").click(function()
+							$("#direct15").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1145,7 +1177,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[14].latitude, listStations[14].longtitude],
+								  destination: [listStations[15].latitude, listStations[15].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1169,7 +1201,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct17").click(function()
+							$("#direct18").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1177,7 +1209,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[17].latitude, listStations[17].longtitude],
+								  destination: [listStations[18].latitude, listStations[18].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1201,7 +1233,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct19").click(function()
+							$("#direct20").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1209,7 +1241,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[19].latitude, listStations[19].longtitude],
+								  destination: [listStations[20].latitude, listStations[20].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1233,7 +1265,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct21").click(function()
+							$("#direct22").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1241,7 +1273,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[21].latitude, listStations[21].longtitude],
+								  destination: [listStations[22].latitude, listStations[22].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1265,7 +1297,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct23").click(function()
+							$("#direct24").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1273,7 +1305,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[23].latitude, listStations[23].longtitude],
+								  destination: [listStations[24].latitude, listStations[24].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1297,7 +1329,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct25").click(function()
+							$("#direct26").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1305,7 +1337,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[25].latitude, listStations[25].longtitude],
+								  destination: [listStations[26].latitude, listStations[26].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1329,7 +1361,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct28").click(function()
+							$("#direct29").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1337,7 +1369,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[28].latitude, listStations[28].longtitude],
+								  destination: [listStations[29].latitude, listStations[29].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1391,12 +1423,13 @@
 															"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
 															"Provides EMS: " + listStations[i].EMS +
 															"<br>Type of station: " + listStations[i].type +
+                                                            "<br>Phone Number: " + listStations[i].phone +
 															"</div><br></li></ul>"
 												);
 							}
 							
 							var ctr = 1;					
-							$("#direct6").click(function()
+							$("#direct7").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1404,39 +1437,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[6].latitude, listStations[6].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
-							
-							var ctr = 1;					
-							$("#direct8").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[8].latitude, listStations[8].longtitude],
+								  destination: [listStations[7].latitude, listStations[7].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1469,6 +1470,38 @@
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
 								  destination: [listStations[9].latitude, listStations[9].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
+							
+							var ctr = 1;					
+							$("#direct10").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[10].latitude, listStations[10].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1780,7 +1813,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct21").click(function()
+							$("#direct19").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -1788,106 +1821,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[21].latitude, listStations[21].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
-							
-							var ctr = 1;					
-							$("#direct26").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[26].latitude, listStations[26].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
-							
-					}
-			});
-		
-				$("#Stoney").click(function(){
-				map.removeMarkers();
-				$("#places").empty();
-				map.cleanRoute();
-					for (var i = 0; i < listStations.length; i++)
-					{
-						latitude2 = listStations[i].latitude;
-						longitude2 = listStations[i].longtitude;
-							//Current Location
-							map.addMarker({ lat: latitude1, lng: longitude1, icon: "images/hereIcon.png"});
-							
-							//Adds icon to EMS Station
-							if (listStations[i].city == "Stoney Creek" ){
-							
-								map.addMarker({lat: listStations[i].latitude, lng: listStations[i].longtitude, icon: "images/firedeptv3icon.png", infoWindow : {content: "<div id = infobox><img src = 'images/firedeptv3.png'><strong>"+ 
-								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
-								
-								//Adds location detail for Hamilton stations seperately
-								$("#places").append("<ul class='media-list'>"+
-															"<li class='media'>"+
-															"<div class='media-left' >" +
-															"<img src='images/firedeptv3.png'>"+
-															"</div>"+
-															"<div class='media-body'>"+
-															"<a id = 'direct"+i+"' href = '#"+i+"' class = 'media-heading'>"+listStations[i].name+"</a>"+
-															"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
-															"Provides EMS: " + listStations[i].EMS +
-															"<br>Type of station: " + listStations[i].type +
-															"</div><br></li></ul>"
-												);
-							}
-							
-							var ctr = 1;					
-							$("#direct20").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[20].latitude, listStations[20].longtitude],
+								  destination: [listStations[19].latitude, listStations[19].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -1941,6 +1875,105 @@
 								}
 							});	
 							});
+
+                        var ctr = 1;
+                        $("#direct27").click(function()
+                        {
+                            ctr = 1;
+                            $("#instructions").empty();
+                            map.cleanRoute();
+
+                            map.travelRoute({
+                                origin: [latitude1, longitude1],
+                                destination: [listStations[27].latitude, listStations[27].longtitude],
+                                travelMode: 'driving',
+                                step: function(e) {
+                                    if (ctr ==1){
+                                        $('#instructions').append('<li>'+e.instructions+'</li>');
+                                    }
+                                    $("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+
+                                        if(e.instructions.includes("Destination")){
+                                            ctr = 2;
+                                        }
+                                        //map.setCenter(e.end_location.lat(), e.end_location.lng());
+                                        map.drawPolyline({
+                                            path: e.path,
+                                            strokeColor: '#131540',
+                                            strokeOpacity: 0.6,
+                                            strokeWeight: 6
+                                        });
+                                    });
+                                }
+                            });
+                        });
+							
+					}
+			});
+		
+				$("#Stoney").click(function(){
+				map.removeMarkers();
+				$("#places").empty();
+				map.cleanRoute();
+					for (var i = 0; i < listStations.length; i++)
+					{
+						latitude2 = listStations[i].latitude;
+						longitude2 = listStations[i].longtitude;
+							//Current Location
+							map.addMarker({ lat: latitude1, lng: longitude1, icon: "images/hereIcon.png"});
+							
+							//Adds icon to EMS Station
+							if (listStations[i].city == "Stoney Creek" ){
+							
+								map.addMarker({lat: listStations[i].latitude, lng: listStations[i].longtitude, icon: "images/firedeptv3icon.png", infoWindow : {content: "<div id = infobox><img src = 'images/firedeptv3.png'><strong>"+ 
+								listStations[i].name +"</strong><br>"+ listStations[i].address+"<br>"+listStations[i].city + "<br>Provides EMS: " + listStations[i].EMS +"</p><a href = 'https://www.google.ca/maps/place/"+listStations[i].address +", " +listStations[i].city +"'>Google Maps</a></div>"}});
+								
+								//Adds location detail for Hamilton stations seperately
+								$("#places").append("<ul class='media-list'>"+
+															"<li class='media'>"+
+															"<div class='media-left' >" +
+															"<img src='images/firedeptv3.png'>"+
+															"</div>"+
+															"<div class='media-body'>"+
+															"<a id = 'direct"+i+"' href = '#"+i+"' class = 'media-heading'>"+listStations[i].name+"</a>"+
+															"<div>"+listStations[i].address +", "+listStations[i].city +"</div>" +
+															"Provides EMS: " + listStations[i].EMS +
+															"<br>Type of station: " + listStations[i].type +
+															"</div><br></li></ul>"
+												);
+							}
+							
+							var ctr = 1;					
+							$("#direct21").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[21].latitude, listStations[21].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
 							
 							var ctr = 1;					
 							$("#direct23").click(function()
@@ -1952,6 +1985,38 @@
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
 								  destination: [listStations[23].latitude, listStations[23].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
+							
+							var ctr = 1;					
+							$("#direct24").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[24].latitude, listStations[24].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2010,7 +2075,7 @@
 							}
 							
 							var ctr = 1;					
-							$("#direct25").click(function()
+							$("#direct26").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2018,7 +2083,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[25].latitude, listStations[25].longtitude],
+								  destination: [listStations[26].latitude, listStations[26].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2076,7 +2141,7 @@
 							}
 							
 							var ctr = 1;					
-							$("#direct7").click(function()
+							$("#direct8").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2084,7 +2149,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[7].latitude, listStations[7].longtitude],
+								  destination: [listStations[8].latitude, listStations[8].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2108,7 +2173,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct28").click(function()
+							$("#direct29").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2116,7 +2181,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[28].latitude, listStations[28].longtitude],
+								  destination: [listStations[29].latitude, listStations[29].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2172,38 +2237,6 @@
 															"</div><br></li></ul>"
 												);
 							}
-							
-							var ctr = 1;					
-							$("#direct0").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[0].latitude, listStations[0].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
 							
 							var ctr = 1;					
 							$("#direct1").click(function()
@@ -2302,7 +2335,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct19").click(function()
+							$("#direct4").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2310,7 +2343,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[19].latitude, listStations[19].longtitude],
+								  destination: [listStations[4].latitude, listStations[4].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2334,7 +2367,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct23").click(function()
+							$("#direct20").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2342,7 +2375,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[23].latitude, listStations[23].longtitude],
+								  destination: [listStations[20].latitude, listStations[20].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2414,6 +2447,38 @@
 									}
 									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
 									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
+							
+							var ctr = 1;					
+							$("#direct26").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[26].latitude, listStations[26].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
 									  if(e.instructions.includes("Hamilton Regional Rd 56 S")){
 										ctr = 2;
 									  }
@@ -2430,7 +2495,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct27").click(function()
+							$("#direct28").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2438,7 +2503,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[27].latitude, listStations[27].longtitude],
+								  destination: [listStations[28].latitude, listStations[28].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2496,7 +2561,7 @@
 							}
 							
 							var ctr = 1;					
-							$("#direct5").click(function()
+							$("#direct6").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2504,39 +2569,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[5].latitude, listStations[5].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
-							
-							var ctr = 1;					
-							$("#direct8").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[8].latitude, listStations[8].longtitude],
+								  destination: [listStations[6].latitude, listStations[6].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2728,7 +2761,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[15].latitude, listStations[15].longtitude],
+								  destination: [listStations[14].latitude, listStations[14].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2761,6 +2794,38 @@
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
 								  destination: [listStations[15].latitude, listStations[15].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
+							
+							var ctr = 1;					
+							$("#direct16").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[16].latitude, listStations[16].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -2846,38 +2911,38 @@
 								}
 							});	
 							});
-							
-							var ctr = 1;					
-							$("#direct21").click(function()
-							{	
-								ctr = 1;
-								$("#instructions").empty();
-								map.cleanRoute();
-								
-								map.travelRoute({
-								  origin: [latitude1, longitude1],
-								  destination: [listStations[21].latitude, listStations[21].longtitude],
-								  travelMode: 'driving',
-								  step: function(e) {
-								  if (ctr ==1){
-									$('#instructions').append('<li>'+e.instructions+'</li>');
-									}
-									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
-									  
-									  if(e.instructions.includes("Destination")){
-										ctr = 2;
-									  }
-									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
-									  map.drawPolyline({
-										path: e.path,
-										strokeColor: '#131540',
-										strokeOpacity: 0.6,
-										strokeWeight: 6
-									  });
-									});
-								}
-							});	
-							});
+
+                        var ctr = 1;
+                        $("#direct19").click(function()
+                        {
+                            ctr = 1;
+                            $("#instructions").empty();
+                            map.cleanRoute();
+
+                            map.travelRoute({
+                                origin: [latitude1, longitude1],
+                                destination: [listStations[19].latitude, listStations[19].longtitude],
+                                travelMode: 'driving',
+                                step: function(e) {
+                                    if (ctr ==1){
+                                        $('#instructions').append('<li>'+e.instructions+'</li>');
+                                    }
+                                    $("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+
+                                        if(e.instructions.includes("Destination")){
+                                            ctr = 2;
+                                        }
+                                        //map.setCenter(e.end_location.lat(), e.end_location.lng());
+                                        map.drawPolyline({
+                                            path: e.path,
+                                            strokeColor: '#131540',
+                                            strokeOpacity: 0.6,
+                                            strokeWeight: 6
+                                        });
+                                    });
+                                }
+                            });
+                        });
 							
 							var ctr = 1;					
 							$("#direct22").click(function()
@@ -2912,7 +2977,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct28").click(function()
+							$("#direct23").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -2920,7 +2985,39 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[28].latitude, listStations[28].longtitude],
+								  destination: [listStations[23].latitude, listStations[23].longtitude],
+								  travelMode: 'driving',
+								  step: function(e) {
+								  if (ctr ==1){
+									$('#instructions').append('<li>'+e.instructions+'</li>');
+									}
+									$("#instructions li:eq(" + e.step_number + ")").fadeIn(200, function() {
+									  
+									  if(e.instructions.includes("Destination")){
+										ctr = 2;
+									  }
+									  //map.setCenter(e.end_location.lat(), e.end_location.lng());
+									  map.drawPolyline({
+										path: e.path,
+										strokeColor: '#131540',
+										strokeOpacity: 0.6,
+										strokeWeight: 6
+									  });
+									});
+								}
+							});	
+							});
+							
+							var ctr = 1;					
+							$("#direct29").click(function()
+							{	
+								ctr = 1;
+								$("#instructions").empty();
+								map.cleanRoute();
+								
+								map.travelRoute({
+								  origin: [latitude1, longitude1],
+								  destination: [listStations[29].latitude, listStations[29].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3019,7 +3116,7 @@
 												);
 							}
 						var ctr = 1;					
-							$("#direct4").click(function()
+							$("#direct5").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -3027,7 +3124,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[4].latitude, listStations[4].longtitude],
+								  destination: [listStations[5].latitude, listStations[5].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3051,7 +3148,7 @@
 							});
 
 							var ctr = 1;					
-							$("#direct7").click(function()
+							$("#direct8").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -3059,7 +3156,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[7].latitude, listStations[7].longtitude],
+								  destination: [listStations[8].latitude, listStations[8].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3083,7 +3180,7 @@
 							});		
 							
 							var ctr = 1;					
-							$("#direct16").click(function()
+							$("#direct17").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -3091,7 +3188,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[16].latitude, listStations[16].longtitude],
+								  destination: [listStations[17].latitude, listStations[17].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3115,7 +3212,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct20").click(function()
+							$("#direct21").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -3123,7 +3220,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[20].latitude, listStations[20].longtitude],
+								  destination: [listStations[21].latitude, listStations[21].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3147,7 +3244,7 @@
 							});
 							
 							var ctr = 1;					
-							$("#direct26").click(function()
+							$("#direct27").click(function()
 							{	
 								ctr = 1;
 								$("#instructions").empty();
@@ -3155,7 +3252,7 @@
 								
 								map.travelRoute({
 								  origin: [latitude1, longitude1],
-								  destination: [listStations[26].latitude, listStations[26].longtitude],
+								  destination: [listStations[27].latitude, listStations[27].longtitude],
 								  travelMode: 'driving',
 								  step: function(e) {
 								  if (ctr ==1){
@@ -3199,4 +3296,28 @@
 			document.body.scrollTop = 0;
 			document.documentElement.scrollTop = 0;
 		}
+		var modal = document.getElementById('instructionModal');
+        var helpme = document.getElementById('helpme');
+        var closeBtn = document.getElementsByClassName('closeBtn')[0];
 
+        modal.style.display = 'block';
+
+        helpme.addEventListener('click', openModal);
+
+        closeBtn.addEventListener('click', closeModal);
+        window.addEventListener('click', outsideClick);
+
+        function openModal(){
+        	modal.style.display = 'block';
+		}
+
+        function closeModal(){
+            modal.style.display = 'none';
+        }
+
+        function outsideClick(e){
+            if(e.target == modal){
+                modal.style.display = 'none';
+            }
+
+        }
