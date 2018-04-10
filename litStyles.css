@@ -1,7 +1,40 @@
+	.modal{
+		display: block;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		background-color: rgba(0,0,0,0.5);
+	}
+
+	.modal-content{
+		font-size: 20px;
+		background-color: #f4f4f4;
+		margin: 5% auto;
+		padding: 20px;
+		width: 70%;
+		box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+	}
+
+	.closeBtn{
+		color: #ccc;
+		float: right;
+		font-size: 30px;
+	}
+
+	.closeBtn:hover, .closeBtn:focus{
+		color: #000;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
 	#map{
-	height: 700px;
-	width: 1050px;
-	margin-left:10px;
+		height: 700px;
+		width: 100%;
+		margin-left:20px;
 	}
 	
 	#logout1{
@@ -11,7 +44,7 @@
 		top:100px;
 	}
 	#banner{
-		height:50%;
+		height:20%;
 	}
 	
 	img{
@@ -91,22 +124,19 @@
 		flex: 40%; /* Set the width of the sidebar */
 		background-color: #f1f1f1; /* Grey background color */
 		margin-right:10px;
-		
+
 	}
 	
 	.main { 
-		flex: 50%; /* Set the width of the main content */
+		flex: 40%; /* Set the width of the main content */
 		background-color: white; /* White background color */
-		
+		margin-right:10px;
 	}
 	#level{
 		margin-top: 18px;
 		margin-right: 3px;
 	}
-	
-	#navLevel{
-		
-	}
+
 	#leveled{
 		margin-top: 8px;
 	}
@@ -119,14 +149,14 @@
 	#leveled2{
 	margin-bottom: 20px;
 	}
-	
+
 	@media (max-width: 500px){
 		body{
 			overflow-x: hidden;
 		}
 		#map{
 			height: 400px;
-			width: 380px;
+			width: 100%;
 		}
 		
 		#banner{
@@ -152,7 +182,12 @@
 			height:40%;
 			width: 375px;
 		}
-		
+
+		#map{
+			height: 400px;
+			width: 100%;
+		}
+
 		#userName1{
 			visibility: hidden;
 		}
